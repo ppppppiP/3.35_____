@@ -6,58 +6,63 @@
 р) слон и ладья
  */
 
-do{
-
-
-
-
-Console.WriteLine("Введите координаты белого слона (1-8 ; 1-8) ");
-int a = Convert.ToInt32(Console.ReadLine());
-
-int b = Convert.ToInt32(Console.ReadLine());
-if (a >= 1 && a <= 8 && b >= 1 && b <= 8)
+int ff;
+do
 {
-    Console.WriteLine("Введите координаты черной ладьи, не совпадающие с координатами белого слона (1-8 ; 1-8) ");
-    int c = Convert.ToInt32(Console.ReadLine());
 
-    int d = Convert.ToInt32(Console.ReadLine());
 
-    if (c >= 1 && c <= 8 && d >= 1 && d <= 8 && c != a || d != b)
+
+
+    Console.WriteLine("Введите координаты белого слона (1-8 ; 1-8) ");
+    int a = Convert.ToInt32(Console.ReadLine());
+
+    int b = Convert.ToInt32(Console.ReadLine());
+    if (a >= 1 && a <= 8 && b >= 1 && b <= 8)
     {
-        Console.WriteLine("Введите координаты поля для хода слона(1-8,1-8), не совпадающие с координатами слона: ");
-        int e = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите координаты черной ладьи, не совпадающие с координатами белого слона (1-8 ; 1-8) ");
+        int c = Convert.ToInt32(Console.ReadLine());
 
-        int f = Convert.ToInt32(Console.ReadLine());
-        if (e >= 1 && e <= 8 && f >= 1 && f <= 8 && e != a || f != b)
+        int d = Convert.ToInt32(Console.ReadLine());
+
+        if (c >= 1 && c <= 8 && d >= 1 && d <= 8 && c != a || d != b)
         {
-            Console.WriteLine("Белый слон        : " + a + " " + b);
-            Console.WriteLine("Черая ладья        : " + c + " " + d);
-            Console.WriteLine("Поле для хода слона: " + e + " " + f);
+            Console.WriteLine("Введите координаты поля для хода слона(1-8,1-8), не совпадающие с координатами слона: ");
+            int e = Convert.ToInt32(Console.ReadLine());
 
-            if (((a - e) == (b - f)) || ((a - e) == (f - b)))   // если ход слоном был сделан правильно по диагонали 
+            int f = Convert.ToInt32(Console.ReadLine());
+            if (e >= 1 && e <= 8 && f >= 1 && f <= 8 && e != a || f != b)
             {
-                if (((c == f) || (d == e)) == true)     //если слон и ладья находятся на одной горизонтали
+                Console.WriteLine("Белый слон        : " + a + " " + b);
+                Console.WriteLine("Черая ладья        : " + c + " " + d);
+                Console.WriteLine("Поле для хода слона: " + e + " " + f);
+           
+                if (((a - e) == (b - f)) || ((a - e) == (f - b)))   // если ход слоном был сделан правильно по диагонали 
                 {
-                    Console.WriteLine("Слон может пойти на эти координаты но попадает под удар ладьи");
+                    if (((c == f) || (d == e)) == true)     //если слон и ладья находятся на одной горизонтали
+                    {
+                        Console.WriteLine("Слон может пойти на эти координаты но попадает под удар ладьи");
 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Слон может пойти на эти координаты не попадая под удар ладьи");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Слон может пойти на эти координаты не попадая под удар ладьи");
+                    Console.WriteLine("Слон не может так пойти");
                 }
             }
-            else
-            {
-                Console.WriteLine("Слон не может так пойти");
-            }
         }
+
+
+
+
     }
-    
-    Console.Writeline("введите 1 если вам надо повторить программу);
-                      int ff = Convert.ToInt16(Console.ReadLine());
-}
-}while(ff==1)
-Console.ReadKey();
-Console.ReadKey();
-Console.ReadKey();
-Console.ReadKey();
+    Console.WriteLine("введите 1 если вам надо повторить программу");
+
+
+
+
+     ff = Convert.ToInt32(Console.ReadLine());
+} while (ff == 1);
