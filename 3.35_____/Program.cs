@@ -5,6 +5,12 @@
 находящейся на поле (c, d). Рассмотреть следующие варианты сочетаний белой и черной фигур
 р) слон и ладья
  */
+
+do{
+
+
+
+
 Console.WriteLine("Введите координаты белого слона (1-8 ; 1-8) ");
 int a = Convert.ToInt32(Console.ReadLine());
 
@@ -46,7 +52,11 @@ if (a >= 1 && a <= 8 && b >= 1 && b <= 8)
             }
         }
     }
+    
+    Console.Writeline("введите 1 если вам надо повторить программу);
+                      int ff = Convert.ToInt16(Console.ReadLine());
 }
+}while(ff==1)
 Console.ReadKey();
 Console.ReadKey();
 Console.ReadKey();
